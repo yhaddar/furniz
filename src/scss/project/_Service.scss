@@ -1,0 +1,87 @@
+#Service{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+    .img_service{
+        padding-top: 200px;
+        margin-left: 90px;
+        display: flex;
+        flex-wrap: nowrap;
+        .img_service_1{
+            width: 310px;
+            height: 550px;
+            margin-left: 50px;
+            margin-top: 20px;
+            background-size: cover;
+            background-origin: border-box;
+            background-repeat: no-repeat;
+            border: 1px solid var(--clr-primary-1);
+            border-radius: 3px;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 312px;
+                height: 557px;
+                background: transparent;
+                border: 1px solid var(--clr-primary-1);
+                margin-left: -22px;
+                margin-top: -16px;
+                z-index: -1;
+                border-radius: 3px;
+            }
+        }
+        .img_service_2{
+            @extend .img_service_1;
+        }
+    }
+    .text_service{
+        margin-top: 200px;
+        margin-left: 20px;
+        &::after{
+            content: '';
+            position: absolute;
+            background: var(--clr-primary-1);
+            width: 305px;
+            height: 5px;
+            border-radius: 3px;
+            margin-left: 166px;
+            float: right;
+            margin-top: 115px;
+        }
+        .title_service{
+            font-size: 37px;
+            font-style: italic;
+            font-family: $font_1;
+            margin-top: 63px;
+            z-index: 1;
+            margin-left: -93px;
+            color: var(--clr-primary-2);
+            margin-bottom: 63px;
+            &::after{
+                content: '';
+                position: absolute;
+                background: var(--clr-primary-1);
+                width: 163px;
+                height: 5px;
+                border-radius: 3px;
+                margin-left: -163px;
+                margin-top: 63px;
+            }
+        }
+        .parg_service{
+            width: 423px;
+            height: 115px;
+            margin-left: 43px;
+            font-size: 17px;
+            color: var(--clr-primary-2);
+            font-family: $font_1;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .explore_service{
+            @include explore_btn;
+        }
+    }
+} 

@@ -1,0 +1,88 @@
+.section_person{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    .person{
+        padding-top: 100px;
+        margin-left: 97px;
+        .img_person{
+            width: 327px;
+            height: 500px;
+            border-radius: 3px;
+            background-size: cover;
+            background-origin: border-box;
+            background-repeat: no-repeat;
+            border: 1px solid var(--clr-primary-1);
+            &::after{
+                content: '';
+                position: absolute;
+                width: 320px;
+                height: 500px;
+                background: none;
+                border: 1px solid var(--clr-primary-1);
+                margin-left: -21px;
+                margin-top: -18px;
+                border-radius: 3px;
+                z-index: -1;
+            }
+        }
+    }
+    .text_person{
+        width: 33%;
+        height: 285px;
+        margin-top: 187px;
+        border-radius: 3px;
+        border: 1px solid var(--clr-primary-1);
+        .name_person{
+            font-size: 29px;
+            font-family: $font_1;
+            color: var(--clr-primary-2);
+            font-style: italic;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-top: 24px;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 162px;
+                height: 5px;
+                background: var(--clr-primary-1);
+                border-radius: 3px;
+                margin-bottom: 20px;
+                margin-top: 60px;
+            }
+        }
+        .detail_person{
+            margin-top: 61px;
+            font-size: 18px;
+            color: var(--clr-primary-2);
+            font-family: $font_1;
+            font-style: italic;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .stars_person{
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
+            margin-left: 50px;
+            display: flex;
+            flex-wrap: nowrap;
+            .stars{
+                width: 37px;
+                height: 37px;
+            }
+            .evaluation{
+                font-size: 24px;
+                font-family: $font_1;
+                font-style: italic;
+                color: var(--clr-primary-2);
+                margin-top: 6px;
+                margin-left: 16px;
+            }
+        }
+    }
+}

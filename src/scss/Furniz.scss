@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-primary-1: #de972f;
+    --clr-primary-2: #ffffff;
+    --clr-primary-3: #000000;
+    --clr-primary-4: #515050;
+    --clr-primary-5: #0000001f;
+    --clr-primary-6: #d6632a;
+    --clr-primary-7: #1e1e1e52;
+}
+
+$font_logo:'Lato', sans-serif;
+$font-1: 'Roboto', sans-serif;
+
+body{
+    background: var(--clr-primary-4);
+}
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+@mixin explore_btn{
+    width: 108px;
+    height: 41px;
+    background: var(--clr-primary-1);
+    border-radius: 5px;
+    border: none;
+    margin-left: 136px;
+    margin-top: -10px;
+    font-size: 15px;
+    font-family: $font-1;
+    font-style: italic;
+    cursor: pointer;
+    font-weight: bold;
+    &:hover{
+        background: var(--clr-primary-6);
+    }
+    &:active{
+        transform: scale(0.98);
+    }
+}
+
+@mixin text {
+    width: 28%;
+    height: 500px;
+    margin-left: 5%;
+    padding-top: 66px;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 390px;
+        height: 4px;
+        border-radius: 3px;
+        background: var(--clr-primary-1);
+        margin-top: 78px;
+    }
+}
+@mixin title {
+    font-size: 30px;
+    font-family: $font_1;
+    color: var(--clr-primary-2);
+    font-style: italic;
+    margin-bottom: 103px;
+}
+
+@import "../scss/project/Navbar.scss";
+@import "../scss/project/Home.scss";
+@import "../scss/project/Service.scss";
+@import "../scss/project/About.scss";
+@import "../scss/project/Contact.scss";
+@import "../scss/project/Person.scss";
+@import "../scss/project/Footer.scss";
+@import "../scss/project/Phone.scss";
+@import "../scss/project/Mobile.scss";
+@import "../scss/project/Tablet.scss";
+@import "../scss/project/Laptop.scss";

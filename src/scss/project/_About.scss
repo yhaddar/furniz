@@ -1,0 +1,51 @@
+.about{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 80px;
+    .text_about{
+        @include text;
+        .title_about{
+            @include title;
+        }
+        .parg_about{
+            font-size: 20px;
+            font-style: italic;
+            font-family: $font_1;
+            color: var(--clr-primary-2);
+        }
+        .parg_about_2{
+            @extend .parg_about;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+        .explore_about{
+            @include explore_btn;
+        }
+    }
+    .img_about{
+        width: 410px;
+        height: 670px;
+        float: right;
+        padding-top: 20px;
+        border: 1px solid var(--clr-primary-1);
+        border-radius: 3px;
+        background-size: cover;
+        background-origin: border-box;
+        background-repeat: no-repeat;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 414px;
+            height: 679px;
+            background: none;
+            margin-left: -22px;
+            margin-top: -42px;
+            z-index: -1;
+            border-radius: 3px;
+            border: 1px solid var(--clr-primary-1);
+        }
+    }
+}
